@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth antialiased">
+<html lang="en" class="scroll-smooth antialiased" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    
-    <meta name="description" content="Muhammad Rizwan (Rizwan Realm) is an AI Entrepreneur. I build autonomous systems that filter out tire-kickers and automate lead qualification. Reclaim your time and freedom.">
-    
-    <meta name="author" content="Muhammad Rizwan">
     <meta name="theme-color" content="#050505">
+    
+    <title>Muhammad Rizwan (Rizwan Realm) | AI Entrepreneur & Automation Architect</title>
+    <meta name="description" content="Muhammad Rizwan (Rizwan Realm) is an AI Entrepreneur specializing in AI Automation and Revenue Systems. I build autonomous infrastructures that qualify leads 24/7.">
+    <meta name="author" content="Muhammad Rizwan">
     <meta name="robots" content="index, follow, max-image-preview:large">
     
     <link rel="canonical" href="https://rizwanrealm.com">
@@ -26,26 +26,6 @@
     <meta name="twitter:title" content="Muhammad Rizwan | AI Entrepreneur">
     <meta name="twitter:description" content="Focus on revenue, not busy work. Enterprise-Grade Lead Qualification Infrastructure.">
     <meta name="twitter:image" content="https://rizwanrealm.com/card.jpg">
-
-    <title>Muhammad Rizwan (Rizwan Realm) | AI Entrepreneur & Automation Architect</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    screens: { 'xxs': '320px', 'xs': '375px', '3xl': '1920px' },
-                    fontFamily: { sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'] },
-                    animation: { 'pulse-slow': 'pulse-glow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite', 'shimmer': 'shimmer 2.5s infinite linear' }
-                }
-            }
-        }
-    </script>
-    
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
     <script type="application/ld+json">
     {
@@ -75,6 +55,8 @@
             "height": 1080
           },
           "hasCredential": [
+            { "@type": "EducationalOccupationalCredential", "name": "Google Digital Marketing & E-Commerce Professional Certificate" },
+            { "@type": "EducationalOccupationalCredential", "name": "CS50's Introduction to Artificial Intelligence with Python (HarvardX)" },
             { "@type": "EducationalOccupationalCredential", "name": "Google AI Essentials" },
             { "@type": "EducationalOccupationalCredential", "name": "Google Prompting Essentials" }
           ],
@@ -85,6 +67,7 @@
             "https://www.facebook.com/rizwanrealm"
           ],
           "knowsAbout": [
+            "AI Automation",
             "Lead Qualification", 
             "Automated SDR Systems", 
             "Sales Psychology", 
@@ -102,95 +85,151 @@
           "priceRange": "$$$",
           "areaServed": "Global",
           "image": "https://rizwanrealm.com/profile.jpg"
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://rizwanrealm.com",
-          "url": "https://rizwanrealm.com",
-          "name": "Muhammad Rizwan (Rizwan Realm) | AI Entrepreneur",
-          "primaryImageOfPage": {
-            "@id": "https://rizwanrealm.com/#primaryimage"
-          },
-          "image": {
-            "@id": "https://rizwanrealm.com/#primaryimage"
-          },
-          "isPartOf": { "@id": "https://rizwanrealm.com/#website" },
-          "about": { "@id": "https://rizwanrealm.com/#person" }
-        },
-        {
-            "@type": "ImageObject",
-            "@id": "https://rizwanrealm.com/#primaryimage",
-            "url": "https://rizwanrealm.com/profile.jpg",
-            "contentUrl": "https://rizwanrealm.com/profile.jpg",
-            "caption": "Muhammad Rizwan - AI Entrepreneur"
         }
       ]
     }
     </script>
 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: { 'xxs': '320px', 'xs': '375px', '3xl': '1920px' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    animation: { 'shimmer': 'shimmer 2.5s infinite linear' },
+                    colors: { brand: '#00C2FF' }
+                }
+            }
+        }
+    </script>
+
     <style>
-        :root { --bg-dark: #050505; --accent: #00C2FF; }
+        :root { --bg-dark: #050505; --accent: #00C2FF; --gold: #FFD700; }
         body { background-color: var(--bg-dark); color: #D1D5DB; overflow-x: hidden; }
-        .reveal, .nav-transition, .card-hover, .btn-press, .safety-icon { will-change: transform, opacity; }
         
-        /* NOTE: Aurora Removed (Replaced by Hero Image) */
+        /* GPU Acceleration & Performance */
+        .reveal, .btn-press, .card-hover { will-change: transform, opacity; }
         .bg-noise { background-image: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.04; pointer-events: none; mix-blend-mode: overlay; }
         
-        .transparent-nav { background: transparent; padding-top: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid transparent; }
-        .glass-nav { 
-            background: rgba(5, 5, 5, 0.85); 
-            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-            padding-top: 1rem; padding-bottom: 1rem; 
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+        /* === THE PHANTOM NAVBAR (Rectangular Blade) === */
+        /* Logic: Starts compact and transparent, Expands and Blurs on scroll */
+        .phantom-nav {
+            position: fixed;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            /* GEOMETRY */
+            border-radius: 12px; 
+            width: 320px; 
+            max-width: 90%;
+            
+            /* GHOST STATE */
+            background: transparent;
+            border: 1px solid transparent;
+            padding: 10px 0;
+            
+            /* MOTION PHYSICS */
+            transition: 
+                width 0.7s cubic-bezier(0.19, 1, 0.22, 1),
+                background 0.7s cubic-bezier(0.19, 1, 0.22, 1),
+                padding 0.7s cubic-bezier(0.19, 1, 0.22, 1),
+                border 0.7s cubic-bezier(0.19, 1, 0.22, 1),
+                backdrop-filter 0.7s ease;
         }
-        .card-hover { 
-            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), border-color 0.4s ease, box-shadow 0.4s ease; 
-            border: 1px solid rgba(255, 255, 255, 0.05); 
+
+        @media (min-width: 768px) {
+            .phantom-nav { width: 420px; } 
+            .phantom-nav.scrolled { width: 94%; max-width: 1200px; }
         }
-        .card-hover:hover { 
-            transform: translateY(-4px); 
-            border-color: rgba(0, 194, 255, 0.25); 
-            box-shadow: 0 12px 40px -12px rgba(0, 194, 255, 0.15); 
+
+        @media (max-width: 767px) {
+            .phantom-nav { width: 95%; } 
+            .phantom-nav.scrolled { width: 98%; }
         }
-        .btn-press { transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1); }
+
+        /* == SCROLLED STATE (The Glass Blade) == */
+        .phantom-nav.scrolled {
+            background: rgba(0, 0, 0, 0.6); 
+            backdrop-filter: blur(30px) saturate(180%); 
+            -webkit-backdrop-filter: blur(30px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.5);
+            padding: 10px 24px;
+        }
+        
+        @media (max-width: 767px) {
+            .phantom-nav.scrolled { padding: 8px 16px; }
+        }
+
+        /* === GOLDEN SPIN ANIMATION === */
+        /* Initial: Blue, Upright */
+        .brand-logo svg {
+            color: #00C2FF;
+            transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease;
+        }
+
+        /* Scrolled: Trigger the Cinematic Sequence */
+        .phantom-nav.scrolled .brand-logo svg {
+            animation: goldToWhite 2.0s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        @keyframes goldToWhite {
+            0% { color: #FFD700; transform: rotate(0deg); }
+            70% { color: #FFD700; } /* Hold Gold during rotation */
+            100% { color: #FFFFFF; transform: rotate(180deg); } /* End White, Rotated */
+        }
+
+        /* === BUTTON SHRINK === */
+        .nav-btn {
+            transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.3s ease;
+            transform-origin: center;
+        }
+        .phantom-nav.scrolled .nav-btn {
+            transform: scale(0.92);
+        }
+
+        /* === BRAND COLORS === */
+        .brand-text .part-1 { color: #00C2FF; transition: color 0.3s ease; }
+        .brand-text .part-2 { color: #FFFFFF; transition: color 0.3s ease; }
+        
+        .brand-group:hover .brand-text .part-1 { color: #FFFFFF; }
+        .brand-group:hover .brand-text .part-2 { color: #00C2FF; }
+
+        /* === STABLE NUMBERS (Tabular Lining) === */
+        /* Prevents jittering by enforcing monospace width on numbers */
+        .tabular-nums {
+            font-variant-numeric: tabular-nums;
+            font-feature-settings: "tnum";
+            letter-spacing: -0.02em;
+        }
+
+        /* === UTILITY === */
+        .card-hover { transition: transform 0.4s ease, border-color 0.4s ease; border: 1px solid rgba(255, 255, 255, 0.05); }
+        .card-hover:hover { transform: translateY(-4px); border-color: rgba(0, 194, 255, 0.25); }
+        .btn-press { transition: transform 0.1s ease; }
         .btn-press:active { transform: scale(0.97); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
         @keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
         .animate-shimmer { animation: shimmer 2s infinite; }
         
-        /* === THE PROFESSIONAL "MATTE PRECISION" SLIDER === */
+        /* Slider Styling */
         input[type=range] { -webkit-appearance: none; background: transparent; width: 100%; cursor: pointer; }
-        
-        /* The Thumb (Handle) */
-        input[type=range]::-webkit-slider-thumb { 
-            -webkit-appearance: none; 
-            height: 20px; width: 20px; /* Perfect size (20px) */
-            border-radius: 50%; 
-            background: #ffffff; /* Matte White (No Shine) */
-            margin-top: -8px; 
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Deep, subtle shadow instead of glow */
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: all 0.2s ease; 
-        }
-        
-        /* The Hover/Touch Effect (Only shines when you use it) */
-        input[type=range]::-webkit-slider-thumb:hover, 
-        input[type=range]::-webkit-slider-thumb:active { 
-            transform: scale(1.1); 
-            box-shadow: 0 0 12px rgba(0, 194, 255, 0.4); /* Subtle Blue Tech Glow on interaction */
-        }
-        
+        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 18px; width: 18px; border-radius: 50%; background: #ffffff; margin-top: -7px; box-shadow: 0 4px 6px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); transition: all 0.2s ease; }
+        input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.1); box-shadow: 0 0 12px rgba(0, 194, 255, 0.4); }
         input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 4px; background: #1e293b; border-radius: 99px; }
-        /* ================================================= */
-
-        @keyframes pulse-glow { 0% { opacity: 0.4; transform: scale(1); } 100% { opacity: 0.6; transform: scale(1.05); } }
-        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-        .delay-100 { transition-delay: 100ms; }
-        .delay-200 { transition-delay: 200ms; }
-        .delay-300 { transition-delay: 300ms; }
     </style>
 </head>
+
 <body class="relative min-h-screen selection:bg-[#00C2FF] selection:text-white">
 
     <div class="fixed inset-0 z-0 pointer-events-none" aria-hidden="true">
@@ -198,62 +237,43 @@
         <div class="absolute inset-0 bg-noise"></div>
     </div>
 
-    <nav id="navbar" class="fixed top-0 w-full z-50 nav-transition transparent-nav" role="navigation" aria-label="Main Navigation">
-        <div class="max-w-7xl 3xl:max-w-[90%] mx-auto px-4 md:px-8 flex justify-between items-center">
+    <nav class="phantom-nav">
+        <div class="brand-group flex items-center gap-1.5 group cursor-pointer select-none flex-nowrap shrink-0">
             
-            <div class="flex items-center gap-3 group cursor-pointer select-none relative" aria-label="Rizwan Realm Home">
-                <div class="relative w-10 h-10 md:w-12 md:h-12 bg-[#0A0A0A] border border-white/10 rounded-xl flex items-center justify-center text-[#00C2FF] font-black text-xs shadow-2xl overflow-hidden shrink-0 z-10 group-hover:border-[#00C2FF]/50 transition-colors duration-300">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-[#00C2FF]/20 to-transparent opacity-50"></div>
-                    <span class="relative z-10">RR</span>
-                </div>
-                
-                <div class="flex flex-col justify-center items-center z-10 w-fit">
-                    <h1 class="text-[14px] xs:text-[16px] md:text-xl font-black tracking-tighter text-white leading-none whitespace-nowrap group-hover:text-[#00C2FF] transition-colors duration-300 text-center">
-                        RIZWAN <span class="text-[#00C2FF] group-hover:text-white transition-colors duration-300">REALM</span>
-                    </h1>
-                    <div class="flex items-center justify-center gap-1.5 mt-1 md:mt-2 w-full text-center flex-nowrap whitespace-nowrap">
-                        <span class="relative flex h-1.5 w-1.5 shrink-0">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
-                        </span>
-                        <span class="text-[7px] xs:text-[8px] md:text-[10px] uppercase tracking-wide text-slate-400 font-medium whitespace-nowrap leading-none">
-                            Where AI Meets ROI
-                        </span>
-                    </div>
-                </div>
+            <div class="brand-logo relative w-6 h-6 flex items-center justify-center shrink-0">
+                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter" class="w-full h-full">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                    <path d="M3.27 6.96 12 12.01l8.73-5.05"></path>
+                    <path d="M12 22.08V12"></path>
+                 </svg>
             </div>
 
-            <div class="flex items-center">
-                <a href="#calculator" class="hidden md:block px-6 py-2.5 bg-white text-black font-bold rounded-lg text-[11px] uppercase tracking-widest hover:bg-[#00C2FF] hover:text-white transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)] btn-press">
-                    Apply for Beta
-                </a>
-                <a href="#calculator" class="md:hidden px-3 py-1.5 bg-white text-black font-bold rounded text-[9px] uppercase tracking-widest shadow-lg btn-press">
-                    Beta Access
-                </a>
-            </div>
+            <h1 class="brand-text text-[14px] xs:text-[15px] font-black tracking-tighter leading-none whitespace-nowrap uppercase">
+                <span class="part-1">RIZWAN</span> <span class="part-2">REALM</span>
+            </h1>
         </div>
+
+        <a href="#calculator" class="nav-btn bg-white text-black text-[10px] font-bold px-3 py-[5px] rounded-md hover:bg-[#00C2FF] hover:text-white transition-all shadow-[0_0_15px_rgba(255,255,255,0.1)] btn-press uppercase tracking-widest whitespace-nowrap shrink-0 border border-transparent">
+            <span class="hidden xs:inline">Apply for Beta</span>
+            <span class="xs:hidden">Beta Access</span>
+        </a>
     </nav>
 
     <main>
-        <header class="relative pt-32 pb-12 md:pt-48 md:pb-24 px-4 md:px-6 flex flex-col items-center justify-center text-center z-10 overflow-hidden min-h-[85vh] md:min-h-[90vh] border-b border-white/5">
-            
+        <header class="relative pt-40 pb-12 md:pt-48 md:pb-24 px-4 md:px-6 flex flex-col items-center justify-center text-center z-10 overflow-hidden min-h-[85vh] md:min-h-[90vh] border-b border-white/5">
             <div class="absolute inset-0 z-0">
-                <img src="hero-bg.jpg" alt="Dubai AI Architecture" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-black/50"></div> <div class="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent"></div> </div>
+                <img src="hero-bg.jpg" alt="Dubai AI Architecture" class="w-full h-full object-cover" fetchpriority="high">
+                <div class="absolute inset-0 bg-black/50"></div> <div class="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent"></div> 
+            </div>
 
             <div class="relative z-10 max-w-4xl 3xl:max-w-6xl w-full">
-                
                 <div class="reveal inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md text-[#00C2FF] text-[10px] font-bold uppercase tracking-[0.15em] mb-6 md:mb-8 cursor-default hover:border-[#00C2FF]/30 transition-colors">
                     <i data-lucide="zap" class="w-3 h-3 fill-current"></i> Recovering Time & Revenue
                 </div>
                 
                 <h2 class="reveal delay-100 font-black tracking-tighter mb-6 md:mb-8 leading-tight text-white drop-shadow-2xl w-full">
-                    <span class="block mb-2 md:mb-4 text-4xl sm:text-6xl md:text-7xl">
-                        STOP LOSING
-                    </span>
-                    <span class="whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-b from-[#00C2FF] to-[#006080] text-[11.5vw] md:text-[clamp(4rem,9vw,8.5rem)] leading-none pb-2">
-                        COMMISSIONS.
-                    </span>
+                    <span class="block mb-2 md:mb-4 text-4xl sm:text-6xl md:text-7xl">STOP LOSING</span>
+                    <span class="whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-b from-[#00C2FF] to-[#006080] text-[11.5vw] md:text-[clamp(4rem,9vw,8.5rem)] leading-none pb-2">COMMISSIONS.</span>
                 </h2>
                 
                 <p class="reveal delay-200 text-sm md:text-xl text-slate-300 max-w-2xl mx-auto mb-8 md:mb-12 leading-relaxed font-light px-2 drop-shadow-md">
@@ -265,7 +285,6 @@
                         <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer w-full h-full"></div>
                         APPLY FOR BETA <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
                     </a>
-                    
                     <button class="btn-press group px-8 py-4 bg-black/40 border border-white/10 text-white font-medium text-sm rounded-lg hover:bg-white/5 transition-all flex items-center justify-center gap-2 cursor-default backdrop-blur-sm">
                         <i data-lucide="bot" class="w-4 h-4 text-slate-400 group-hover:text-white transition-colors"></i> TEST LIVE AGENT
                     </button>
@@ -275,10 +294,7 @@
                     <div class="flex justify-between items-center border-b border-white/5 pb-3">
                          <span class="text-[10px] text-slate-500 font-mono uppercase">System Status</span>
                          <div class="flex items-center gap-2 bg-green-500/10 px-2 py-1 rounded-full border border-green-500/20">
-                            <span class="relative flex h-1.5 w-1.5">
-                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
-                            </span>
+                            <span class="relative flex h-1.5 w-1.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span></span>
                             <span class="text-green-400 font-mono text-[10px] font-bold">ONLINE</span>
                          </div>
                     </div>
@@ -300,11 +316,9 @@
 
         <section class="py-16 md:py-24 bg-[#0A0A0A] border-b border-white/5 relative z-10 overflow-hidden px-4 md:px-6">
             <div class="max-w-5xl 3xl:max-w-7xl mx-auto">
-                
                 <div class="reveal flex items-center gap-3 text-red-500 font-bold mb-6 tracking-widest text-xs uppercase">
                     <span class="w-2 h-2 rounded-full bg-red-500"></span> The Speed Problem
                 </div>
-                
                 <h2 class="reveal text-3xl md:text-5xl font-bold text-white mb-8 md:mb-12 leading-tight">
                     Speed is the Only <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800">Differentiator Left.</span>
                 </h2>
@@ -331,33 +345,29 @@
                     <h3 class="text-xl font-bold text-white mb-8 text-center">The Performance Gap</h3>
                     <div class="w-full">
                         <div class="grid grid-cols-3 gap-2 border-b border-[#00C2FF]/30 pb-4 mb-4">
-                            <div class="text-center text-[10px] md:text-sm font-bold text-slate-500 uppercase tracking-widest">Metric</div>
-                            <div class="text-center text-[10px] md:text-sm font-bold text-slate-500 uppercase tracking-widest">Traditional</div>
-                            <div class="text-center text-[10px] md:text-sm font-bold text-[#00C2FF] uppercase tracking-widest">AI System</div>
+                            <div class="text-center text-xs md:text-sm font-bold text-slate-500 uppercase tracking-tight md:tracking-widest">Metric</div>
+                            <div class="text-center text-xs md:text-sm font-bold text-slate-500 uppercase tracking-tight md:tracking-widest">Traditional</div>
+                            <div class="text-center text-xs md:text-sm font-bold text-[#00C2FF] uppercase tracking-tight md:tracking-widest">AI System</div>
                         </div>
-                        
                         <div class="grid grid-cols-3 gap-2 items-center py-3 border-b border-white/5 hover:bg-white/5 transition-colors">
-                            <div class="text-center text-[10px] md:text-sm text-slate-300 font-bold">Response</div>
-                            <div class="text-center text-[10px] md:text-sm text-red-500 line-through decoration-red-500/30">2 Hours</div>
-                            <div class="text-center text-[10px] md:text-sm text-[#00C2FF] font-bold">Instant</div>
+                            <div class="text-center text-xs md:text-sm text-slate-300 font-bold tracking-tight">Response</div>
+                            <div class="text-center text-xs md:text-sm text-red-500 line-through decoration-red-500/30 tracking-tight">2 Hours</div>
+                            <div class="text-center text-xs md:text-sm text-[#00C2FF] font-bold tracking-tight">Instant</div>
                         </div>
-                        
                         <div class="grid grid-cols-3 gap-2 items-center py-3 border-b border-white/5 hover:bg-white/5 transition-colors">
-                            <div class="text-center text-[10px] md:text-sm text-slate-300 font-bold">Uptime</div>
-                            <div class="text-center text-[10px] md:text-sm text-red-500 line-through decoration-red-500/30">Day Only</div>
-                            <div class="text-center text-[10px] md:text-sm text-[#00C2FF] font-bold">24/7/365</div>
+                            <div class="text-center text-xs md:text-sm text-slate-300 font-bold tracking-tight">Uptime</div>
+                            <div class="text-center text-xs md:text-sm text-red-500 line-through decoration-red-500/30 tracking-tight">Day Only</div>
+                            <div class="text-center text-xs md:text-sm text-[#00C2FF] font-bold tracking-tight">24/7/365</div>
                         </div>
-                        
                         <div class="grid grid-cols-3 gap-2 items-center py-3 border-b border-white/5 hover:bg-white/5 transition-colors">
-                            <div class="text-center text-[10px] md:text-sm text-slate-300 font-bold">CRM Sync</div>
-                            <div class="text-center text-[10px] md:text-sm text-red-500 line-through decoration-red-500/30">Manual</div>
-                            <div class="text-center text-[10px] md:text-sm text-[#00C2FF] font-bold">Auto</div>
+                            <div class="text-center text-xs md:text-sm text-slate-300 font-bold tracking-tight">CRM Sync</div>
+                            <div class="text-center text-xs md:text-sm text-red-500 line-through decoration-red-500/30 tracking-tight">Manual</div>
+                            <div class="text-center text-xs md:text-sm text-[#00C2FF] font-bold tracking-tight">Auto</div>
                         </div>
-                        
                         <div class="grid grid-cols-3 gap-2 items-center py-3 hover:bg-white/5 transition-colors">
-                            <div class="text-center text-[10px] md:text-sm text-slate-300 font-bold">Consistency</div>
-                            <div class="text-center text-[10px] md:text-sm text-red-500 line-through decoration-red-500/30">Random</div>
-                            <div class="text-center text-[10px] md:text-sm text-[#00C2FF] font-bold">Perfect</div>
+                            <div class="text-center text-xs md:text-sm text-slate-300 font-bold tracking-tight">Consistency</div>
+                            <div class="text-center text-xs md:text-sm text-red-500 line-through decoration-red-500/30 tracking-tight">Random</div>
+                            <div class="text-center text-xs md:text-sm text-[#00C2FF] font-bold tracking-tight">Perfect</div>
                         </div>
                     </div>
                 </div>
@@ -372,20 +382,19 @@
                     </div>
                     <h2 class="text-3xl md:text-5xl font-bold text-white">Strict Safety Guardrails</h2>
                 </div>
-                
                 <div class="grid md:grid-cols-3 gap-6">
                     <article class="reveal delay-100 safety-card p-6 md:p-8 bg-[#0A0A0A] border border-white/5 rounded-2xl hover:border-[#00C2FF]/30 group cursor-default">
-                        <div class="safety-icon mb-6 text-[#00C2FF] transition-all duration-300 group-hover:-translate-x-1 group-hover:text-white"><i data-lucide="database" class="w-8 h-8"></i></div>
+                        <div class="mb-6 text-[#00C2FF] transition-all duration-300 group-hover:-translate-x-1 group-hover:text-white"><i data-lucide="database" class="w-8 h-8"></i></div>
                         <h3 class="text-white font-bold text-lg mb-3">Fact-Based Only</h3>
                         <p class="text-slate-400 text-sm leading-relaxed">The AI never invents numbers. It is architected to only use the data you provide.</p>
                     </article>
                     <article class="reveal delay-200 safety-card p-6 md:p-8 bg-[#0A0A0A] border border-white/5 rounded-2xl hover:border-[#00C2FF]/30 group cursor-default">
-                        <div class="safety-icon mb-6 text-[#00C2FF] transition-all duration-300 group-hover:-translate-x-1 group-hover:text-white"><i data-lucide="lock" class="w-8 h-8"></i></div>
+                        <div class="mb-6 text-[#00C2FF] transition-all duration-300 group-hover:-translate-x-1 group-hover:text-white"><i data-lucide="lock" class="w-8 h-8"></i></div>
                         <h3 class="text-white font-bold text-lg mb-3">Script Adherence</h3>
                         <p class="text-slate-400 text-sm leading-relaxed">It follows a strict logical flow designed to qualify. It never goes off-topic.</p>
                     </article>
                     <article class="reveal delay-300 safety-card p-6 md:p-8 bg-[#0A0A0A] border border-white/5 rounded-2xl hover:border-[#00C2FF]/30 group cursor-default">
-                        <div class="safety-icon mb-6 text-[#00C2FF] transition-all duration-300 group-hover:-translate-x-1 group-hover:text-white"><i data-lucide="user-check" class="w-8 h-8"></i></div>
+                        <div class="mb-6 text-[#00C2FF] transition-all duration-300 group-hover:-translate-x-1 group-hover:text-white"><i data-lucide="user-check" class="w-8 h-8"></i></div>
                         <h3 class="text-white font-bold text-lg mb-3">Smart Handoff</h3>
                         <p class="text-slate-400 text-sm leading-relaxed">Instantly alerts a human agent for complex negotiations or sensitive issues.</p>
                     </article>
@@ -395,50 +404,37 @@
 
         <section id="calculator" class="py-16 md:py-24 px-4 md:px-6 relative z-10 bg-[#0A0A0A] border-t border-white/5">
             <div class="reveal card-hover max-w-4xl mx-auto bg-[#050505] border border-white/5 rounded-3xl p-6 md:p-12 shadow-2xl">
-                
                 <div class="text-center mb-8 md:mb-12">
                     <div class="inline-flex items-center gap-2 mb-4 text-[#00C2FF] font-bold uppercase tracking-widest text-xs">
                         <i data-lucide="calculator" class="w-4 h-4"></i> ROI Engine
                     </div>
-                    <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">
-                        Calculate Missed Revenue.
-                    </h2>
+                    <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">Calculate Missed Revenue.</h2>
                 </div>
-                
                 <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-                    
                     <div class="space-y-6 md:space-y-10">
                         <div>
                             <div class="flex justify-between text-sm mb-2">
                                 <span class="text-slate-400 font-medium">Monthly Leads</span>
-                                <span class="text-white font-mono" id="lead-display">100</span>
+                                <span class="text-white font-mono tabular-nums" id="lead-display">100</span>
                             </div>
                             <input type="range" id="lead-slider" min="10" max="500" step="10" value="100" aria-label="Leads Slider">
                         </div>
                         <div>
                             <div class="flex justify-between text-sm mb-2">
                                 <span class="text-slate-400 font-medium">Avg. Commission</span>
-                                <span class="text-white font-mono">AED <span id="deal-display">15,000</span></span>
+                                <span class="text-white font-mono tabular-nums">AED <span id="deal-display">15,000</span></span>
                             </div>
                             <input type="range" id="deal-slider" min="5000" max="100000" step="5000" value="15000" aria-label="Commission Slider">
                         </div>
                     </div>
-
                     <div class="bg-gradient-to-br from-[#0A0A0A] to-[#000000] rounded-2xl p-5 md:p-8 border border-white/5 text-center flex flex-col justify-center overflow-hidden h-fit">
                         <p class="text-[#00C2FF] text-[10px] font-bold uppercase tracking-widest mb-2 md:mb-4">Potential Annual Recovery</p>
-                        
                         <div class="flex flex-col justify-center items-center py-4 md:h-32 md:py-0 mb-3 md:mb-4">
-                            <div class="text-[11vw] xs:text-5xl md:text-6xl font-black text-white tracking-tighter whitespace-nowrap" id="result-display">0</div>
+                            <div class="text-[11vw] xs:text-5xl md:text-6xl font-black text-white tracking-tighter whitespace-nowrap tabular-nums" id="result-display">0</div>
                             <span class="text-sm text-slate-500 font-bold mt-2">AED</span>
                         </div>
-                        
-                        <a href="mailto:rizwanrealm@gmail.com" class="btn-press w-full py-4 bg-white text-black font-bold rounded-lg hover:bg-[#00C2FF] hover:text-white transition-colors block">
-                            SECURE MY SLOT
-                        </a>
-                        
-                        <p class="text-[9px] text-slate-600 mt-3 md:mt-4 italic leading-tight">
-                            *Based on 20% reactivation & 5% close rate benchmarks. Results vary.
-                        </p>
+                        <a href="mailto:rizwanrealm@gmail.com" class="btn-press w-full py-4 bg-white text-black font-bold rounded-lg hover:bg-[#00C2FF] hover:text-white transition-colors block">SECURE MY SLOT</a>
+                        <p class="text-[9px] text-slate-600 mt-3 md:mt-4 italic leading-tight">*Based on 20% reactivation & 5% closing rate benchmarks. Results may vary.</p>
                     </div>
                 </div>
             </div>
@@ -446,12 +442,9 @@
 
         <section class="py-16 md:py-24 px-6 relative z-10">
             <div class="reveal max-w-3xl mx-auto text-center">
-                <div class="mb-8 opacity-30 flex justify-center">
-                    <i data-lucide="quote" class="w-10 h-10 text-white"></i>
-                </div>
+                <div class="mb-8 opacity-30 flex justify-center"><i data-lucide="quote" class="w-10 h-10 text-white"></i></div>
                 <blockquote class="text-3xl md:text-5xl font-serif italic text-white mb-8 leading-tight">
-                    "Scale your agency.<br>
-                    Not your <span class="text-[#00C2FF] not-italic font-sans font-bold">payroll.</span>"
+                    "Scale your agency.<br>Not your <span class="text-[#00C2FF] not-italic font-sans font-bold">payroll.</span>"
                 </blockquote>
                 <div class="flex flex-col items-center">
                     <cite class="text-white font-bold text-lg tracking-wide uppercase not-italic">Muhammad Rizwan</cite>
@@ -463,7 +456,17 @@
 
     <footer class="relative z-50 pt-10 pb-5 border-t border-white/10 bg-black text-center">
         <div class="flex flex-col gap-6 items-center">
-            <div class="flex items-center gap-2 text-[10px] text-green-500 font-bold uppercase tracking-widest">
+            
+            <div class="flex flex-col items-center gap-1.5 mt-4">
+                <div class="text-xs text-slate-500 font-mono tracking-wide">
+                    UI/UX Design by 
+                    <a href="https://www.linkedin.com/in/marwashahzadihq" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-[#00C2FF] transition-colors font-bold underline decoration-slate-700 hover:decoration-[#00C2FF] underline-offset-4 ml-1">
+                        Marwa Shahzadi
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2 text-[10px] text-green-500 font-bold uppercase tracking-widest mt-2">
                 <i data-lucide="shield-check" class="w-3 h-3"></i> Official WhatsApp Business API
             </div>
             
@@ -473,79 +476,87 @@
                 <a href="https://twitter.com/rizwanrealm" class="text-slate-500 hover:text-white transition-colors hover:scale-110 transform duration-200" aria-label="Twitter Profile"><i data-lucide="twitter" class="w-5 h-5"></i></a>
             </div>
             
-            <div class="text-xs text-slate-300 mt-4 font-mono opacity-80 hover:opacity-100 transition-opacity">
+            <div class="text-xs text-slate-300 mt-2 font-mono opacity-80 hover:opacity-100 transition-opacity">
                 © 2026 Rizwan Realm. All systems operational.
             </div>
         </div>
     </footer>
 
     <script>
-        // Initialize Icons
         lucide.createIcons();
 
-        // 1. SCROLL OBSERVER (Reveals elements on scroll)
+        // NAVBAR LOGIC
+        const nav = document.querySelector('.phantom-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 30) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        }, { passive: true });
+
+        // ANIMATIONS
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('active');
             });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
-        // 2. NAV GLASSMORPHISM ENGINE
-        const nav = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if(window.scrollY > 20) {
-                nav.classList.remove('transparent-nav');
-                nav.classList.add('glass-nav');
-            } else {
-                nav.classList.remove('glass-nav');
-                nav.classList.add('transparent-nav');
-            }
-        }, { passive: true });
-
-        // 3. ROI CALCULATOR LOGIC
+        // TIME-BOUNDED STABLE CALCULATOR (1.2s Exact - Slot Machine Feel)
         const leadSlider = document.getElementById('lead-slider');
         const dealSlider = document.getElementById('deal-slider');
         const leadDisplay = document.getElementById('lead-display');
         const dealDisplay = document.getElementById('deal-display');
         const resultDisplay = document.getElementById('result-display');
 
-        function animateValue(obj, start, end, duration) {
+        // Animation Engine: Moves from Start -> End over exactly 1200ms
+        function animateValue(element, start, end, duration) {
             let startTimestamp = null;
             const step = (timestamp) => {
                 if (!startTimestamp) startTimestamp = timestamp;
                 const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                obj.innerHTML = Math.floor(progress * (end - start) + start).toLocaleString();
+                
+                // Ease Out Quart (Fast start, buttery smooth stop)
+                const ease = 1 - Math.pow(1 - progress, 4);
+                
+                const value = Math.floor(start + (end - start) * ease);
+                element.innerText = value.toLocaleString();
+
                 if (progress < 1) {
                     window.requestAnimationFrame(step);
+                } else {
+                    element.innerText = end.toLocaleString(); // Exact finish
                 }
             };
             window.requestAnimationFrame(step);
         }
 
         let currentResult = 0;
-
         function updateCalculator() {
             const leads = parseInt(leadSlider.value);
             const deal = parseInt(dealSlider.value);
-            // Formula: Leads * 20% Reactivation * 5% Close Rate * Deal Value * 12 Months
             const annualRecovery = Math.floor(leads * 0.20 * 0.05 * deal * 12);
             
+            // Instant updates for slider values
             leadDisplay.innerText = leads.toLocaleString();
             dealDisplay.innerText = deal.toLocaleString();
             
+            // Smooth 1.2s animation for the Result
             if (annualRecovery !== currentResult) {
-                animateValue(resultDisplay, currentResult, annualRecovery, 500);
+                animateValue(resultDisplay, currentResult, annualRecovery, 1200);
                 currentResult = annualRecovery;
             }
         }
-
         leadSlider.addEventListener('input', updateCalculator);
         dealSlider.addEventListener('input', updateCalculator);
-        
-        // Initial Boot
         updateCalculator();
+
+        // DEVELOPER LOG
+        window.addEventListener('load', () => {
+            console.clear(); 
+            console.log("%c RIZWAN REALM %c SYSTEM: ONLINE ", "background: #050505; color: #fff; padding: 6px 10px; font-weight: bold;", "background: #00C2FF; color: #000; padding: 6px 10px; font-weight: bold;");
+        });
     </script>
 </body>
 </html>
