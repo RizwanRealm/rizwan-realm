@@ -9,7 +9,6 @@
     <meta name="description" content="Muhammad Rizwan (Rizwan Realm) is an AI Entrepreneur specializing in AI Automation and Revenue Systems. I build autonomous infrastructures that qualify leads 24/7.">
     <meta name="author" content="Muhammad Rizwan">
     <meta name="robots" content="index, follow, max-image-preview:large">
-    
     <link rel="canonical" href="https://rizwanrealm.com">
     <link rel="icon" type="image/png" href="/favicon.png"> 
 
@@ -32,59 +31,24 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "WebSite",
-          "@id": "https://rizwanrealm.com/#website",
-          "url": "https://rizwanrealm.com",
-          "name": "Muhammad Rizwan",
-          "alternateName": "Rizwan Realm",
-          "description": "The Official Website of Muhammad Rizwan, AI Entrepreneur.",
-          "publisher": { "@id": "https://rizwanrealm.com/#person" }
-        },
-        {
           "@type": "Person",
           "@id": "https://rizwanrealm.com/#person",
           "name": "Muhammad Rizwan",
           "alternateName": "Rizwan Realm",
-          "description": "AI Entrepreneur helping businesses achieve time freedom by automating lead qualification and eliminating manual follow-ups.",
           "jobTitle": "AI Entrepreneur",
           "url": "https://rizwanrealm.com",
-          "image": {
-            "@type": "ImageObject",
-            "url": "https://rizwanrealm.com/profile.jpg",
-            "width": 1080,
-            "height": 1080
-          },
           "hasCredential": [
             { "@type": "EducationalOccupationalCredential", "name": "Google Digital Marketing & E-Commerce Professional Certificate" },
-            { "@type": "EducationalOccupationalCredential", "name": "CS50's Introduction to Artificial Intelligence with Python (HarvardX)" },
+            { "@type": "EducationalOccupationalCredential", "name": "CS50's Introduction to Artificial Intelligence (HarvardX)" },
             { "@type": "EducationalOccupationalCredential", "name": "Google AI Essentials" },
             { "@type": "EducationalOccupationalCredential", "name": "Google Prompting Essentials" }
           ],
           "sameAs": [
             "https://twitter.com/rizwanrealm",
             "https://www.instagram.com/rizwanrealm",
-            "https://www.linkedin.com/in/rizwanrealm",
-            "https://www.facebook.com/rizwanrealm"
+            "https://www.linkedin.com/in/rizwanrealm"
           ],
-          "knowsAbout": [
-            "AI Automation",
-            "Lead Qualification", 
-            "Automated SDR Systems", 
-            "Sales Psychology", 
-            "Revenue Operations",
-            "Business Strategy",
-            "Speed-to-Lead"
-          ]
-        },
-        {
-          "@type": "ProfessionalService",
-          "name": "Rizwan Realm",
-          "url": "https://rizwanrealm.com",
-          "description": "We build intelligent systems that filter leads and book qualified appointments.",
-          "founder": { "@id": "https://rizwanrealm.com/#person" },
-          "priceRange": "$$$",
-          "areaServed": "Global",
-          "image": "https://rizwanrealm.com/profile.jpg"
+          "knowsAbout": ["AI Automation", "Lead Qualification", "Revenue Operations", "Speed-to-Lead"]
         }
       ]
     }
@@ -110,109 +74,113 @@
     <style>
         :root { --bg-dark: #050505; --accent: #00C2FF; --gold: #FFD700; }
         body { background-color: var(--bg-dark); color: #D1D5DB; overflow-x: hidden; }
-        
-        /* GPU Acceleration & Performance */
         .reveal, .btn-press, .card-hover { will-change: transform, opacity; }
         .bg-noise { background-image: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.04; pointer-events: none; mix-blend-mode: overlay; }
         
-        /* === THE PHANTOM NAVBAR (Rectangular Blade) === */
-        /* Logic: Starts compact and transparent, Expands and Blurs on scroll */
+        /* === THE PHANTOM NAVBAR === */
         .phantom-nav {
             position: fixed;
-            top: 24px;
-            left: 50%;
-            transform: translateX(-50%);
             z-index: 100;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            left: 50%;
+            transform: translateX(-50%);
             
-            /* GEOMETRY */
-            border-radius: 12px; 
-            width: 320px; 
-            max-width: 90%;
-            
-            /* GHOST STATE */
+            /* BASE STATE: Transparent */
             background: transparent;
             border: 1px solid transparent;
-            padding: 10px 0;
             
-            /* MOTION PHYSICS */
+            /* PHYSICS: The "Lock-In" Curve */
             transition: 
-                width 0.7s cubic-bezier(0.19, 1, 0.22, 1),
-                background 0.7s cubic-bezier(0.19, 1, 0.22, 1),
-                padding 0.7s cubic-bezier(0.19, 1, 0.22, 1),
-                border 0.7s cubic-bezier(0.19, 1, 0.22, 1),
-                backdrop-filter 0.7s ease;
+                top 0.8s cubic-bezier(0.25, 0.8, 0.25, 1),
+                width 0.8s cubic-bezier(0.25, 0.8, 0.25, 1),
+                background 0.8s cubic-bezier(0.25, 0.8, 0.25, 1),
+                padding 0.8s cubic-bezier(0.25, 0.8, 0.25, 1),
+                border 0.8s cubic-bezier(0.25, 0.8, 0.25, 1),
+                border-radius 0.8s cubic-bezier(0.25, 0.8, 0.25, 1),
+                backdrop-filter 0.8s ease;
         }
 
-        @media (min-width: 768px) {
-            .phantom-nav { width: 420px; } 
-            .phantom-nav.scrolled { width: 94%; max-width: 1200px; }
-        }
-
+        /* === MOBILE GEOMETRY (THE FIX) === */
         @media (max-width: 767px) {
-            .phantom-nav { width: 95%; } 
-            .phantom-nav.scrolled { width: 98%; }
+            /* 1. START STATE: Full Width (100%) */
+            /* Touching the edges, spread apart */
+            .phantom-nav { 
+                top: 16px; 
+                width: 100%; 
+                border-radius: 0px; /* Square edges initially */
+                padding: 12px 20px; /* Standard spacing */
+            } 
+            
+            /* 2. SCROLLED STATE: Shrinks to 95% */
+            /* Detaches from edges, creates the capsule */
+            .phantom-nav.scrolled { 
+                top: 8px; /* Slides UP slightly */
+                width: 95%; /* VISIBLY SHRINKS */
+                border-radius: 16px; /* Rounds the corners */
+                padding: 10px 20px; /* Tightens vertical */
+            }
         }
 
-        /* == SCROLLED STATE (The Glass Blade) == */
+        /* === DESKTOP GEOMETRY === */
+        @media (min-width: 768px) {
+            .phantom-nav { 
+                top: 24px;
+                width: 420px; 
+                border-radius: 12px;
+                padding: 10px 0;
+            } 
+            .phantom-nav.scrolled { 
+                top: 12px; 
+                width: 95%; 
+                max-width: 1200px;
+                padding: 10px 24px;
+            }
+        }
+
+        /* === GLASS MATERIAL === */
         .phantom-nav.scrolled {
             background: rgba(0, 0, 0, 0.6); 
             backdrop-filter: blur(30px) saturate(180%); 
             -webkit-backdrop-filter: blur(30px) saturate(180%);
             border: 1px solid rgba(255, 255, 255, 0.08);
             box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.5);
-            padding: 10px 24px;
-        }
-        
-        @media (max-width: 767px) {
-            .phantom-nav.scrolled { padding: 8px 16px; }
         }
 
-        /* === GOLDEN SPIN ANIMATION === */
-        /* Initial: Blue, Upright */
+        /* === LOGO ANIMATION (Molten Gold -> White) === */
         .brand-logo svg {
             color: #00C2FF;
             transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease;
         }
-
-        /* Scrolled: Trigger the Cinematic Sequence */
         .phantom-nav.scrolled .brand-logo svg {
-            animation: goldToWhite 2.0s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            animation: moltenForge 2.0s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+        @keyframes moltenForge {
+            0% { transform: rotate(0deg); color: #00C2FF; filter: drop-shadow(0 0 0 transparent); }
+            30% { transform: rotate(360deg); color: #FFD700; filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.6)); } 
+            60% { transform: rotate(720deg); color: #FFD700; filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.4)); } 
+            85% { transform: rotate(720deg); color: #00C2FF; filter: drop-shadow(0 0 2px rgba(0, 194, 255, 0.5)); } 
+            100% { transform: rotate(720deg); color: #FFFFFF; filter: drop-shadow(0 0 0 transparent); } 
         }
 
-        @keyframes goldToWhite {
-            0% { color: #FFD700; transform: rotate(0deg); }
-            70% { color: #FFD700; } /* Hold Gold during rotation */
-            100% { color: #FFFFFF; transform: rotate(180deg); } /* End White, Rotated */
-        }
-
-        /* === BUTTON SHRINK === */
+        /* === BUTTON ANIMATION (Compress) === */
         .nav-btn {
-            transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.3s ease;
+            transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.3s ease;
             transform-origin: center;
         }
         .phantom-nav.scrolled .nav-btn {
-            transform: scale(0.92);
+            transform: scale(0.9);
         }
 
         /* === BRAND COLORS === */
         .brand-text .part-1 { color: #00C2FF; transition: color 0.3s ease; }
         .brand-text .part-2 { color: #FFFFFF; transition: color 0.3s ease; }
-        
         .brand-group:hover .brand-text .part-1 { color: #FFFFFF; }
         .brand-group:hover .brand-text .part-2 { color: #00C2FF; }
 
-        /* === STABLE NUMBERS (Tabular Lining) === */
-        /* Prevents jittering by enforcing monospace width on numbers */
-        .tabular-nums {
-            font-variant-numeric: tabular-nums;
-            font-feature-settings: "tnum";
-            letter-spacing: -0.02em;
-        }
-
         /* === UTILITY === */
+        .tabular-nums { font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
         .card-hover { transition: transform 0.4s ease, border-color 0.4s ease; border: 1px solid rgba(255, 255, 255, 0.05); }
         .card-hover:hover { transform: translateY(-4px); border-color: rgba(0, 194, 255, 0.25); }
         .btn-press { transition: transform 0.1s ease; }
@@ -222,7 +190,7 @@
         @keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
         .animate-shimmer { animation: shimmer 2s infinite; }
         
-        /* Slider Styling */
+        /* Slider */
         input[type=range] { -webkit-appearance: none; background: transparent; width: 100%; cursor: pointer; }
         input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 18px; width: 18px; border-radius: 50%; background: #ffffff; margin-top: -7px; box-shadow: 0 4px 6px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); transition: all 0.2s ease; }
         input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.1); box-shadow: 0 0 12px rgba(0, 194, 255, 0.4); }
@@ -238,25 +206,27 @@
     </div>
 
     <nav class="phantom-nav">
-        <div class="brand-group flex items-center gap-1.5 group cursor-pointer select-none flex-nowrap shrink-0">
+        <div class="flex justify-between items-center w-full">
             
-            <div class="brand-logo relative w-6 h-6 flex items-center justify-center shrink-0">
-                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter" class="w-full h-full">
-                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                    <path d="M3.27 6.96 12 12.01l8.73-5.05"></path>
-                    <path d="M12 22.08V12"></path>
-                 </svg>
+            <div class="brand-group flex items-center gap-1.5 group cursor-pointer select-none flex-nowrap shrink-0">
+                <div class="brand-logo relative w-6 h-6 flex items-center justify-center shrink-0">
+                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter" class="w-full h-full">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        <path d="M3.27 6.96 12 12.01l8.73-5.05"></path>
+                        <path d="M12 22.08V12"></path>
+                     </svg>
+                </div>
+                <h1 class="brand-text text-[14px] xs:text-[15px] font-black tracking-tighter leading-none whitespace-nowrap uppercase">
+                    <span class="part-1">RIZWAN</span> <span class="part-2">REALM</span>
+                </h1>
             </div>
 
-            <h1 class="brand-text text-[14px] xs:text-[15px] font-black tracking-tighter leading-none whitespace-nowrap uppercase">
-                <span class="part-1">RIZWAN</span> <span class="part-2">REALM</span>
-            </h1>
+            <a href="#calculator" class="nav-btn bg-white text-black text-[10px] font-bold px-3 py-[5px] rounded-md hover:bg-[#00C2FF] hover:text-white transition-all shadow-[0_0_15px_rgba(255,255,255,0.1)] btn-press uppercase tracking-widest whitespace-nowrap shrink-0 border border-transparent flex items-center justify-center leading-none">
+                <span class="hidden xs:inline">Apply for Beta</span>
+                <span class="xs:hidden">Beta Access</span>
+            </a>
+            
         </div>
-
-        <a href="#calculator" class="nav-btn bg-white text-black text-[10px] font-bold px-3 py-[5px] rounded-md hover:bg-[#00C2FF] hover:text-white transition-all shadow-[0_0_15px_rgba(255,255,255,0.1)] btn-press uppercase tracking-widest whitespace-nowrap shrink-0 border border-transparent">
-            <span class="hidden xs:inline">Apply for Beta</span>
-            <span class="xs:hidden">Beta Access</span>
-        </a>
     </nav>
 
     <main>
@@ -503,21 +473,20 @@
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
-        // TIME-BOUNDED STABLE CALCULATOR (1.2s Exact - Slot Machine Feel)
+        // STABLE CALCULATOR (1.2s Exact)
         const leadSlider = document.getElementById('lead-slider');
         const dealSlider = document.getElementById('deal-slider');
         const leadDisplay = document.getElementById('lead-display');
         const dealDisplay = document.getElementById('deal-display');
         const resultDisplay = document.getElementById('result-display');
 
-        // Animation Engine: Moves from Start -> End over exactly 1200ms
         function animateValue(element, start, end, duration) {
             let startTimestamp = null;
             const step = (timestamp) => {
                 if (!startTimestamp) startTimestamp = timestamp;
                 const progress = Math.min((timestamp - startTimestamp) / duration, 1);
                 
-                // Ease Out Quart (Fast start, buttery smooth stop)
+                // Ease Out Quart
                 const ease = 1 - Math.pow(1 - progress, 4);
                 
                 const value = Math.floor(start + (end - start) * ease);
@@ -542,7 +511,7 @@
             leadDisplay.innerText = leads.toLocaleString();
             dealDisplay.innerText = deal.toLocaleString();
             
-            // Smooth 1.2s animation for the Result
+            // Smooth 1.2s animation for result
             if (annualRecovery !== currentResult) {
                 animateValue(resultDisplay, currentResult, annualRecovery, 1200);
                 currentResult = annualRecovery;
