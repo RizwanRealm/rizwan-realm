@@ -9,6 +9,7 @@
     <meta name="description" content="Muhammad Rizwan (Rizwan Realm) is an AI Entrepreneur specializing in AI Automation and Revenue Systems. I build autonomous infrastructures that qualify leads 24/7.">
     <meta name="author" content="Muhammad Rizwan">
     <meta name="robots" content="index, follow, max-image-preview:large">
+    
     <link rel="canonical" href="https://rizwanrealm.com">
     <link rel="icon" type="image/png" href="/favicon.png"> 
 
@@ -46,7 +47,8 @@
           "sameAs": [
             "https://twitter.com/rizwanrealm",
             "https://www.instagram.com/rizwanrealm",
-            "https://www.linkedin.com/in/rizwanrealm"
+            "https://www.linkedin.com/in/rizwanrealm",
+            "https://www.facebook.com/rizwanrealm"
           ],
           "knowsAbout": ["AI Automation", "Lead Qualification", "Revenue Operations", "Speed-to-Lead"]
         }
@@ -87,9 +89,11 @@
             left: 50%;
             transform: translateX(-50%);
             
-            /* BASE STATE: Transparent */
+            /* GHOST STATE */
             background: transparent;
             border: 1px solid transparent;
+            padding: 10px 0;
+            border-radius: 12px;
             
             /* PHYSICS: The "Lock-In" Curve */
             transition: 
@@ -102,24 +106,26 @@
                 backdrop-filter 0.8s ease;
         }
 
-        /* === MOBILE GEOMETRY (THE FIX) === */
+        /* === MOBILE GEOMETRY (PERFECTED) === */
         @media (max-width: 767px) {
-            /* 1. START STATE: Full Width (100%) */
-            /* Touching the edges, spread apart */
+            /* START: 100% Width (Touching Edges) */
             .phantom-nav { 
-                top: 16px; 
+                top: 20px;
                 width: 100%; 
-                border-radius: 0px; /* Square edges initially */
-                padding: 12px 20px; /* Standard spacing */
+                border-radius: 0px; 
+                padding-left: 20px; 
+                padding-right: 20px; 
             } 
             
-            /* 2. SCROLLED STATE: Shrinks to 95% */
-            /* Detaches from edges, creates the capsule */
+            /* SCROLLED: 95% Width (Shrinks Inward) */
             .phantom-nav.scrolled { 
-                top: 8px; /* Slides UP slightly */
-                width: 95%; /* VISIBLY SHRINKS */
-                border-radius: 16px; /* Rounds the corners */
-                padding: 10px 20px; /* Tightens vertical */
+                top: 8px; /* Slides UP */
+                width: 95%; /* SHRINKS */
+                border-radius: 16px; 
+                padding-left: 16px; 
+                padding-right: 16px;
+                padding-top: 8px;
+                padding-bottom: 8px;
             }
         }
 
@@ -128,8 +134,6 @@
             .phantom-nav { 
                 top: 24px;
                 width: 420px; 
-                border-radius: 12px;
-                padding: 10px 0;
             } 
             .phantom-nav.scrolled { 
                 top: 12px; 
@@ -148,7 +152,7 @@
             box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.5);
         }
 
-        /* === LOGO ANIMATION (Molten Gold -> White) === */
+        /* === LOGO ANIMATION (Molten Gold) === */
         .brand-logo svg {
             color: #00C2FF;
             transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease;
